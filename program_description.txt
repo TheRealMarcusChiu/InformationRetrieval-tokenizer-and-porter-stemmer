@@ -1,0 +1,98 @@
+Problem #1
+
+Time program took to acquire the text characteristics: 667 milliseconds
+number of tokens in collection: 186412
+number of unique tokens in collection: 19420
+number of words that occur only once in collection: 12894
+1. the = 15805
+2. of = 9523
+3. and = 4715
+4. a = 4670
+5. to = 3718
+6. in = 3632
+7. is = 3466
+8. for = 2692
+9. are = 1951
+10. with = 1654
+11. by = 1382
+12. at = 1352
+13. on = 1316
+14. that = 1298
+15. flow = 1257
+16. an = 1106
+17. be = 1072
+18. this = 953
+19. as = 932
+20. from = 848
+21. it = 808
+22. pressure = 803
+23. which = 778
+24. boundary = 743
+25. number = 732
+26. results = 703
+27. layer = 673
+28. mach = 580
+29. theory = 575
+30. was = 547
+average number of tokens per document: 133
+
+1. How long the program took to acquire the text characteristics.
+   667 milliseconds - without Porter Stemmer
+   782 milliseconds - with Porter Stemmer
+
+2. How the program handles:
+   A. Upper and lower case words (e.g. "People", "people", "Apple", "apple")
+      - all tokens are converted to lower case. so people and PeoPle are treated as the same token
+   B. Words with dashes (e.g. "1996-97", "middle-class", "30-year", "tean-ager")
+      - words with dashes are split into its own token based on where the dash is
+   C. Possessives (e.g. "sheriff's", "university's")
+      - ' is replaced with a space, therefore it would be split into 2 tokens
+   D. Acronyms (e.g., "U.S.", "U.N.")
+      - U.S. is converted to US
+
+3. Briefly discuss your major algorithms and data structures.
+   - create function to turn file into String
+   - used open source library to parse SGML to retrieve the TEXT content
+   - used TreeMap to store the distinct words and the number of occurrences
+   - after all documents in collection is read, compute the statistics
+   - Porter Stemmer is enabled when argument is passed
+
+
+
+Problem #2
+
+Time program took to acquire the text characteristics: 782 milliseconds
+number of tokens in collection: 186412
+number of unique tokens in collection: 16599
+number of words that occur only once in collection: 11359
+1. the = 15805
+2. of = 9523
+3. and = 4717
+4. a = 4670
+5. to = 3718
+6. in = 3632
+7. is = 3466
+8. for = 2692
+9. ar = 1952
+10. with = 1654
+11. on = 1578
+12. flow = 1401
+13. by = 1382
+14. at = 1352
+15. that = 1298
+16. be = 1150
+17. an = 1106
+18. number = 998
+19. it = 959
+20. thi = 953
+21. as = 932
+22. pressur = 925
+23. result = 860
+24. from = 848
+25. which = 778
+26. boundari = 761
+27. layer = 754
+28. method = 683
+29. effect = 653
+30. theori = 638
+average number of tokens per document: 133
